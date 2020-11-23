@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt-get update && \
-    apt-get -y install python3-pip vim htop &&\
+    apt-get -y install python3-pip vim htop && \
     pip3 install flask
 COPY app.py /opt/app.py
 ENTRYPOINT  FLASK_APP=/opt/app.py flask run --host=0.0.0.0
